@@ -7,7 +7,7 @@ let currentDate: null = null;
 // совместим лишь тип undefined и any
 let anyDate: any;
 // currentDate = undefined;
-// currentDate = anyDate;
+currentDate = anyDate;
 
 // Это поведение можно изменить флагом --strictNullChecks (или общим флагом --strict)
 // strictNullChecks тип null является подтипом только одного типа any

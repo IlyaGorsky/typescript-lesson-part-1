@@ -7,7 +7,7 @@
 import historyLib from "./anyLib";
 
 historyLib.get();
-// historyLib.pop();
+historyLib.pop();
 //     ^^^^^^ error
 
 /**

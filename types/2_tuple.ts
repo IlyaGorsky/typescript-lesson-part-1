@@ -15,7 +15,7 @@ type PersonAge = number;
 type PersonZipCode = number;
 type Persons = [PersonName, PersonAge];
 
-let persons: [PersonName, PersonAge][] = [];
+// let persons: [PersonName, PersonAge][] = [];
 // persons.push(["Ilya", 2]);
 
 // mixedTuple.

@@ -13,4 +13,4 @@ function getUsdPrice() {
   return price * USD;
 }
 
-// console.log(getUsdPrice().toFixed(0));
+console.log(getUsdPrice().toFixed(0));

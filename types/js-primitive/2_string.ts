@@ -12,7 +12,7 @@ let Country: string = String("Russia");
 // let Country: string = new String('Russia');
 
 function print() {
-  return Name + "/" + City + "/" + Country;
+  return Name + "/" + 34123 + "/" + Country;
 }
 
 console.log(print());

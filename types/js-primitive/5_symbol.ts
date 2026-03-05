@@ -9,3 +9,4 @@ let someObject = {
   [uniqKey]: "hashMeta",
 };
 let hash: string = someObject[uniqKey];
+// console.log(hash)

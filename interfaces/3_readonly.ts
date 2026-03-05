@@ -34,4 +34,4 @@ var abc: readonly string[] = ["a", "b", "c"];
 // var abc: Readonly<Array<string>> = ["a", "b", "c"];
 // var abc: ReadonlyArray<string> = ["a", "b", "c"];
 
-abc[0] = "d";
+// abc[0] = "d";

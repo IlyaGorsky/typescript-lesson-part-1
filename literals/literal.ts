@@ -13,17 +13,21 @@ required(false);
 // required(1)
 // required("false")
 
+enum Animations {
+  easing = 'in',
+  out = 'out'
+}
 /**
  * Строковые литеральный тип
  *
  * @name String
  * @description п
  */
-// function animate(easing: "in" | "out" | "easeInOut" | "lienar") {
-//   switch (easing) { }
-// }
+function animate(easing: Animations) {
+  switch (easing) { }
+}
 
-// animate("in");
+// animate('easing');
 // animate("ease");
 // animate("easeIn");
 
@@ -43,7 +47,7 @@ required(false);
     }
     console.log("start");
   };
-  // start(81); // вызов с неправильным значением
+  start(81); // вызов с неправильным значением
 }
 
 {
@@ -59,5 +63,5 @@ required(false);
     console.log(`start port: ${port}`);
   };
   // start(81);
-  // start(80);
+  start(80);
 }

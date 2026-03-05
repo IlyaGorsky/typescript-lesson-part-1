@@ -9,4 +9,7 @@ react = undefined;
 
 // При активном флаге --strictNullChecks , тип undefined является подтипом
 // только одного типа any .
-// let svelte: undefined = null;
+let svelte: undefined = null;
+
+
+// console.log( undefined == null )

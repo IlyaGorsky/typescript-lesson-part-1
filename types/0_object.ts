@@ -17,10 +17,12 @@ student = {
   id: 1,
   firstName: "Ilya",
   lastName: "Gorskiy",
-    phone: "777 77 77",
+  // phone: "777 77 77",
 };
 
 let studentPhone: string;
+
+
 
 if (student.phone) {
   studentPhone = student.phone;

@@ -1,10 +1,10 @@
-# typescript-school2024
+# typescript-school2026
 
 ## Содержание
 
-TypeScript hh-school 2024
+TypeScript hh-school 2026
 
-- [typescript-school2024](#typescript-school2024)
+- [typescript-school2026](#typescript-school2026)
   - [Содержание](#содержание)
   - [Старт](#старт)
     - [Установка](#установка)

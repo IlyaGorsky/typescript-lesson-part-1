@@ -6,14 +6,18 @@
 - Кэшируйте результат по аргументам
 */
 
-function memoize(fn) {
-  const cache = new Map();
+type PrimitiveArg = string | number;
 
-  return function (...args) {
+function memoize<Args extends PrimitiveArg[], R>(
+  fn: (...args: Args) => R,
+): (...args: Args) => R {
+  const cache = new Map<string, R>();
+
+  return function (this: unknown, ...args: Args) {
     const key = JSON.stringify(args);
 
     if (cache.has(key)) {
-      return cache.get(key);
+      return cache.get(key)!;
     }
 
     const result = fn.apply(this, args);
@@ -23,15 +27,16 @@ function memoize(fn) {
   };
 }
 
-const slowAdd = (a, b) => {
+const slowAdd = (a: number, b: number): number => {
   return a + b;
 };
 
 const obj = {
   value: 10,
-  add(a) {
+  add(a: number): number {
     return this.value + a;
   },
+  memoAdd: undefined as unknown as (a: number) => number,
 };
 
 const memoAdd = memoize(slowAdd);

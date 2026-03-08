@@ -7,11 +7,11 @@
 - Немедленно реджектится при первой ошибке
 */
 
-function promiseAll(promises) {
+function promiseAll(promises: Array<Promise<number>>): Promise<number[]> {
   return new Promise((resolve, reject) => {
-    const result = [];
-    let count = 0;
-    const total = promises.length;
+    const result: number[] = [];
+    let count: number = 0;
+    const total: number = promises.length;
 
     if (total === 0) {
       resolve([]);
@@ -20,14 +20,14 @@ function promiseAll(promises) {
 
     promises.forEach((promise, i) => {
       Promise.resolve(promise)
-        .then((value) => {
+        .then((value: number) => {
           result[i] = value;
           count++;
           if (count === total) {
             resolve(result);
           }
         })
-        .catch((error) => {
+        .catch((error: unknown) => {
           reject(error);
         });
     });

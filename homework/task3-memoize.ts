@@ -31,12 +31,17 @@ const slowAdd = (a: number, b: number): number => {
   return a + b;
 };
 
-const obj = {
+type Obj = {
+  value: number;
+  add(a: number): number;
+  memoAdd?: (a: number) => number;
+};
+
+const obj: Obj = {
   value: 10,
-  add(a: number): number {
+  add(a) {
     return this.value + a;
   },
-  memoAdd: undefined as unknown as (a: number) => number,
 };
 
 const memoAdd = memoize(slowAdd);
@@ -44,5 +49,7 @@ memoAdd(1, 2); // возвращает 3
 memoAdd(1, 2); // из кэша, возвращает 3
 obj.memoAdd = memoize(obj.add);
 
-console.log(obj.memoAdd(5));
-console.log(obj.memoAdd(5));
+if (obj.memoAdd) {
+  console.log(obj.memoAdd(5));
+  console.log(obj.memoAdd(5));
+}

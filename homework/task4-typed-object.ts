@@ -42,11 +42,21 @@ const schema = {
 
 const user = typedObject(schema);
 
+user.name = "Ivan"; // выполнится
+user.age = 20; // выполнится
+
 try {
-  user.name = "Ivan"; // выполнится
-  user.age = 20; // выполнится
-  // user.age = true; // должно выбросить ошибку
-  // user.age = "20"; // должно выбросить ошибку
+  // Демонстрация ошибки для boolean
+  // @ts-expect-error
+  user.age = true; // должно выбросить ошибку
+} catch (error: unknown) {
+  console.error(error);
+}
+
+try {
+  // Демонстрация ошибки для string
+  // @ts-expect-error
+  user.age = "20"; // должно выбросить ошибку
 } catch (error: unknown) {
   console.error(error);
 }

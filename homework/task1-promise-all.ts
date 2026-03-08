@@ -7,9 +7,9 @@
 - Немедленно реджектится при первой ошибке
 */
 
-function promiseAll(promises: Array<Promise<number>>): Promise<number[]> {
+function promiseAll<T>(promises: Array<Promise<T>>): Promise<T[]> {
   return new Promise((resolve, reject) => {
-    const result: number[] = [];
+    const result: T[] = [];
     let count: number = 0;
     const total: number = promises.length;
 
@@ -20,7 +20,7 @@ function promiseAll(promises: Array<Promise<number>>): Promise<number[]> {
 
     promises.forEach((promise, i) => {
       Promise.resolve(promise)
-        .then((value: number) => {
+        .then((value: T) => {
           result[i] = value;
           count++;
           if (count === total) {

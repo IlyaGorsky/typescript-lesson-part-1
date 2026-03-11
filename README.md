@@ -142,6 +142,10 @@ npx tsc --init
 
 - [TypeScript Handbook (официальный)](https://www.typescriptlang.org/docs/handbook/)
 
+### Глоссарий
+
+- [Глоссарий TypeScript — Часть 1](glossary.md)
+
 ### Шпаргалки
 
 - [TypeScript Cheatsheets](https://www.typescriptlang.org/cheatsheets/)
